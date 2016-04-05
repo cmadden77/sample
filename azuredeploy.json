@@ -20,7 +20,7 @@
       "metadata": {
         "description": "The type of the Storage Account created"
       },
-      "defaultValue": "Standard_LRS"
+      "defaultValue": "Standard_GRS"
     },
     "location": {
       "type": "string",
@@ -35,63 +35,64 @@
       ],
       "metadata": {
         "description": "The region to deploy the resources into"
-      }
+      },
+      "defaultValue": "South Central US"
     },
     "virtualNetworkName": {
       "type": "string",
       "metadata": {
         "description": "The name of the Virtual Network to Create"
       },
-      "defaultValue": "adVNET"
+      "defaultValue": "MGMTVNET"
     },
     "virtualNetworkAddressRange": {
       "type": "string",
       "metadata": {
         "description": "The address range of the new VNET in CIDR format"
       },
-      "defaultValue": "10.0.0.0/16"
+      "defaultValue": "10.254.0.0/16"
     },
     "adSubnetName": {
       "type": "string",
       "metadata": {
         "description": "The name of the subnet created in the new VNET"
       },
-      "defaultValue": "adSubnet"
+      "defaultValue": "MGMTSubnet"
     },
     "adSubnet": {
       "type": "string",
       "metadata": {
         "description": "The address range of the subnet created in the new VNET"
       },
-      "defaultValue": "10.0.0.0/24"
+      "defaultValue": "10.254.1.0/24"
     },
     "adPDCNicName": {
       "type": "string",
       "metadata": {
         "description": "The name of the NIC attached to the new PDC"
       },
-      "defaultValue": "adPDCNic"
+      "defaultValue": "adDC1Nic"
     },
     "adPDCNicIPAddress": {
       "type": "string",
       "metadata": {
-        "description": "The IP address of the new AD PDC"
+        "description": "The IP address of the new AD DC1"
       },
-      "defaultValue": "10.0.0.4"
+      "defaultValue": "10.254.1.4"
     },
     "adBDCNicName": {
       "type": "string",
       "metadata": {
-        "description": "The name of the NIC attached to the new BDC"
+        "description": "The name of the NIC attached to the new DC2"
       },
-      "defaultValue": "adBDCNic"
+      "defaultValue": "adDC2Nic"
     },
     "adBDCNicIPAddress": {
       "type": "string",
       "metadata": {
-        "description": "The IP address of the new AD BDC"
+        "description": "The IP address of the new AD DC2"
       },
-      "defaultValue": "10.0.0.5"
+      "defaultValue": "10.254.1.5"
     },
     "publicIPAddressName": {
       "type": "string",
@@ -116,14 +117,14 @@
       "metadata": {
         "description": "The computer name of the PDC"
       },
-      "defaultValue": "adPDC"
+      "defaultValue": "ax-us4-dc-01"
     },
     "adBDCVMName": {
       "type": "string",
       "metadata": {
         "description": "The computer name of the BDC"
       },
-      "defaultValue": "adBDC"
+      "defaultValue": "ax-us4-dc-01"
     },
     "adminUsername": {
       "type": "string",
